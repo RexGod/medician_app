@@ -35,11 +35,18 @@ class homePage extends StatelessWidget {
                 const Text('دسته بندی ها'),
               ],
             ),
-            ListView.builder(
-            itemBuilder: (context, index) => Category(),
-            itemCount: 4,
-
-            ),
+            /* Expanded(child: ListView.builder(
+              itemBuilder: (context, index) => Category(),
+              itemCount: 1,
+            ),), */
+            Container(
+                height: 150,
+                margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  reverse: true,
+                  children: [Category(), Category(), Category(), Category()],
+                )),
             Container(),
           ],
         ));
